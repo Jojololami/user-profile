@@ -17,7 +17,7 @@ const AllCards = () => {
      const [searchName, setSearchName] = useState('');
 
      //Search users by city or company
-     const [cityOrCompany, setCityOrCompany] = useState('');
+    //  const [cityOrCompany, setCityOrCompany] = useState('');
 
       useEffect(( ) => {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -46,10 +46,10 @@ const AllCards = () => {
     user.username.toLowerCase().includes(searchName.toLowerCase())
   );
 
-  const filteredByCityOrCompany = users.filter(user =>
-    user.address.city.toLowerCase().includes(cityOrCompany.toLowerCase()) ||
-    user.company.name.toLowerCase().includes(cityOrCompany.toLowerCase())
-  );
+//   const filteredByCityOrCompany = users.filter(user =>
+//     user.address.city.toLowerCase().includes(cityOrCompany.toLowerCase()) ||
+//     user.company.name.toLowerCase().includes(cityOrCompany.toLowerCase())
+//   );
 
   if (loading) return <p>Loading users...</p>;
   if (error) return <p>{error}</p>;
@@ -68,12 +68,12 @@ const AllCards = () => {
           onChange={e => setSearchName(e.target.value)}
         />
 
-          <input
+          {/* <input
           type="text"
           placeholder="Search by city or company"
           value={cityOrCompany}
           onChange={e => setCityOrCompany(e.target.value)}
-        />
+        /> */}
         
        </div>
    </div>
@@ -86,14 +86,14 @@ const AllCards = () => {
         )}
       </main>
 
-      {/* Cards filtered by city/company */}
+      {/* Cards filtered by city/company
       <main className='all_cards_container'>
         {filteredByCityOrCompany.length > 0 ? (
           filteredByCityOrCompany.map(user => <Card key={user.id} user={user} />)
         ) : (
           <p>No users found for this city or company.</p>
         )}
-      </main>
+      </main> */}
       
       </>
   )
