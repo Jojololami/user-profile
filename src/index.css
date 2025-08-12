@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  font-family: "Work Sans", sans-serif;
+}
+.profile_card {
+  border: 2px solid #9299d8;
+  max-width: 300px;
+  background-color: #ecf38dab;
+  text-align: center;
+  margin: 0 auto;
+  padding: 30px 5px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.profile_image {
+  padding-left: 5px;
+}
+.profile_image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.viewmore_details {
+  font-size: 14px;
+}
+.hidden {
+  display: none;
+
+}
+.all_cards_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.directory_heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.change_theme {
+    text-align: center;
+}
+@keyframes blinkColors {
+  0% {
+    color: red;
+  }
+
+  25% {
+    color: orange;
+  }
+
+  50% {
+    color: green;
+  }
+
+  75% {
+    color: blue;
+  }
+
+  100% {
+    color: red;
+  }
+}
+.blinking-text {
+  animation: blinkColors 2s infinite;
+}
+ .dark-mode {
+   background-color: #121212;
+   color: white;
+ }
+
+ .light-mode {
+   background-color: white;
+   color: black;
+ }
+ input {
+        padding: 5px;
+        margin: 10px 0;
+        width: 250px;
+        font-size: 14px;
+        text-align: center;
+          border: 1px solid gray;
+
+ }
